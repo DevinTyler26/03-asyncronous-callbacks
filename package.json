@@ -6,8 +6,8 @@
   "scripts": {
     "test": "eslint . && jest --coverage",
     "testWatch": "jest --coverage --watchAll",
-    "test-nolint": "jest --coverage",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test_": "jest --coverage"
   },
   "repository": {
     "type": "git",
