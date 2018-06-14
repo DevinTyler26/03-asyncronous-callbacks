@@ -34,17 +34,17 @@ describe('tests to see if fileReader reads the files', () => {
 
 
   test('this will test multiple arrays going into readMoreFiles', () => {
-    fileReader.readMoreFiles(mockText1, (err, data1) => {
-      expect(data1).toEqual(mockData[0]);
+    fileReader.readMoreFiles([mockText1, mockText2, mockText3], (err, data) => {
+      expect(data).toEqual(["MOCK 1 - I AM IN MOCK ASSESTS", "MOCK 2", "MOCK 3"]);
       expect(err).toBeNull();
     });
-    fileReader.readMoreFiles(mockText2, (err, data2) => {
-      expect(data2).toEqual(mockData[1]);
-      expect(err).toBeNull();
-    });
-    fileReader.readMoreFiles(mockText3, (err, data3) => {
-      expect(data3).toEqual(mockData[2]);
-      expect(err).toBeNull();
-    });
+    // fileReader.readMoreFiles(mockText2, (err, data2) => {
+    //   expect(data2).toEqual(mockText2);
+    //   expect(err).toBeNull();
+    // });
+    // fileReader.readMoreFiles(mockText3, (err, data3) => {
+    //   expect(data3).toEqual(mockText3);
+    //   expect(err).toBeNull();
+    // });
   });
 });
