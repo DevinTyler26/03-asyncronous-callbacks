@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/DevinTyler26/03-asyncronous-callbacks.svg?branch=lab-03)](https://travis-ci.org/DevinTyler26/03-asyncronous-callbacks)
 ![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 03: Asynchronous Callbacks
 ===
 
@@ -45,4 +46,4 @@ In the lib/ directory create a `reader.js` module that exports a single function
 Write the file reader function recursively so that it will be able to support 0 or more paths.
 
 ##  Documentation
-Add your Travis CI build badge to the top of your README.md. Describe the exported values of each module you have defined. Every function description should include it's arity (expected number of parameters), the expected data for each paramiter (data-type and limitations), and it's behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
+This filer reader will take in 3 file paths and check the contents. If if reaches a bad path it will throw an error.
