@@ -27,9 +27,23 @@ describe('tests to see if fileReader reads the files', () => {
 
   test('will return an err if file path or name is bad', () => {
     fileReader.readFile('bad path', (err) => {
-      console.log(err);
       expect(err).toHaveProperty('errno');
       expect(err.code).toEqual('ENOENT');
     });
+  });
+});
+
+test('this will test multiple arrays going into readMoreFiles', () => {
+  fileReader.readMoreFiles(mockText1, (err, data1) => {
+    expect(data1).toEqual(mockData[0]);
+    expect(err).toBeNull();
+  });
+  fileReader.readMoreFiles(mockText2, (err, data2) => {
+    expect(data3).toEqual(mockData[1]);
+    expect(err).toBeNull();
+  });
+  fileReader.readMoreFiles(mockText3, (err, data3) => {
+    expect(data3).toEqual(mockData[2]);
+    expect(err).toBeNull();
   });
 });
